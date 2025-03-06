@@ -1,8 +1,17 @@
+"use client"
+
 import Image from "next/image"
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Projects() {
+  const handleViewAllProjects = () => {
+    const messageContainer = document.getElementById("additional-projects-message")
+    if (messageContainer) {
+      messageContainer.innerHTML = "<p class='text-center text-gray-700 mt-8'>The baker is still baking, others coming soon</p>"
+    }
+  }
+
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -27,20 +36,20 @@ export function Projects() {
               </div>
               <div className="flex gap-3">
                 <a href="https://github.com/dideey/TakaTecha" target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-[#002D62] text-[#002D62] hover:bg-[#002D62] hover:text-white"
-                >
-                  <Github size={16} className="mr-2" />
-                  Code
-                </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-[#002D62] text-[#002D62] hover:bg-[#002D62] hover:text-white"
+                  >
+                    <Github size={16} className="mr-2" />
+                    Code
+                  </Button>
                 </a>
                 <a href="https://drive.google.com/file/d/1MJdIwY9Wwcp2uaAZXptOOaDpDiC8fV-U/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="bg-[#002D62] text-white hover:bg-[#003a80]">
-                  <ExternalLink size={16} className="mr-2" />
-                  Live Demo
-                </Button>
+                  <Button size="sm" className="bg-[#002D62] text-white hover:bg-[#003a80]">
+                    <ExternalLink size={16} className="mr-2" />
+                    Live Demo
+                  </Button>
                 </a>
               </div>
             </div>
@@ -64,20 +73,20 @@ export function Projects() {
               </div>
               <div className="flex gap-3">
                 <a href="https://github.com/dideey/BradTech" target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-[#002D62] text-[#002D62] hover:bg-[#002D62] hover:text-white"
-                >
-                  <Github size={16} className="mr-2" />
-                  Code
-                </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-[#002D62] text-[#002D62] hover:bg-[#002D62] hover:text-white"
+                  >
+                    <Github size={16} className="mr-2" />
+                    Code
+                  </Button>
                 </a>
                 <a href="https://drive.google.com/file/d/105ys2h6_Kny_N0n7DMd7WA6BNh8fdkHk/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <Button size="sm" className="bg-[#002D62] text-white hover:bg-[#003a80]">
-                  <ExternalLink size={16} className="mr-2" />
-                  Live Demo
-                </Button>
+                  <Button size="sm" className="bg-[#002D62] text-white hover:bg-[#003a80]">
+                    <ExternalLink size={16} className="mr-2" />
+                    Live Demo
+                  </Button>
                 </a>
               </div>
             </div>
@@ -99,21 +108,21 @@ export function Projects() {
                 <span className="px-2 py-1 bg-gray-100 text-[#002D62] text-xs rounded-full">Framer Motion</span>
               </div>
               <div className="flex gap-3">
-                <a>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="border-[#002D62] text-[#002D62] hover:bg-[#002D62] hover:text-white"
-                >
-                  <Github size={16} className="mr-2" />
-                  Code
-                </Button>
+                <a href="https://github.com/dideey/portfolio" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="border-[#002D62] text-[#002D62] hover:bg-[#002D62] hover:text-white"
+                  >
+                    <Github size={16} className="mr-2" />
+                    Code
+                  </Button>
                 </a>
-                <a>
-                <Button size="sm" className="bg-[#002D62] text-white hover:bg-[#003a80]">
-                  <ExternalLink size={16} className="mr-2" />
-                  Live Demo
-                </Button>
+                <a href="#portfolio" target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" className="bg-[#002D62] text-white hover:bg-[#003a80]">
+                    <ExternalLink size={16} className="mr-2" />
+                    Live Demo
+                  </Button>
                 </a>
               </div>
             </div>
@@ -121,10 +130,16 @@ export function Projects() {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="bg-[#002D62] text-white hover:bg-[#003a80]" size="lg">
+          <Button
+            className="bg-[#002D62] text-white hover:bg-[#003a80]"
+            size="lg"
+            onClick={handleViewAllProjects}
+          >
             View All Projects
           </Button>
         </div>
+
+        <div id="additional-projects-message" className="mt-12"></div>
       </div>
     </section>
   )
