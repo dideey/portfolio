@@ -63,7 +63,7 @@ export function Projects() {
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 text-[#002D62]">Wajibika Api</h3>
               <p className="text-gray-700 mb-4">
-                An API for promoting acountability, throught gathering all leader scandles
+                An API for promoting acountability and trasparency through communial responsibility
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-2 py-1 bg-gray-100 text-[#002D62] text-xs rounded-full">Django</span>
