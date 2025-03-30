@@ -25,7 +25,7 @@ export function Contact() {
     e.preventDefault();
   
     try {
-      const response = await fetch("https://email-node-hj2jefl1r-bradleys-projects-8307eaaf.vercel.app/", {
+      const response = await fetch("https://email-node-hj2jefl1r-bradleys-projects-8307eaaf.vercel.app/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
